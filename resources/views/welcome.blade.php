@@ -12,7 +12,7 @@ html, body {
 }
 
 .full-height {
-    height: 100vh;
+    height: calc(100vh - 105px);
 }
 
 .flex-center {
@@ -56,6 +56,7 @@ html, body {
 @endsection
 
 @section('content')
+<sidebar-nav :menu="menu" side="right" sidebar-top="150px"></sidebar-nav>
 <div class="flex-center position-ref full-height">
     <div class="content">
         <div class="title m-b-md">

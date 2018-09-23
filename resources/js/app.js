@@ -17,6 +17,29 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
+// Import and register sidebar-nav as global vue component
+import SidebarNav from 'sidebar-nav';
+Vue.component('sidebar-nav', SidebarNav);
+
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+        menu: [{
+            name: 'Address Book',
+            icon: 'fas fa-address-book',
+            link: '#'
+        },{
+            name: 'Accommodation',
+            icon: 'fas fa-bed',
+            link: '#'
+        },{
+            name: 'Calendar',
+            icon: 'fas fa-calendar-alt',
+            link: '#'
+        },{
+            name: 'Comments',
+            icon: 'fas fa-comments',
+            link: '#'
+        }]
+    }
 });
